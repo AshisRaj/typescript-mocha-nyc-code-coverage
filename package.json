@@ -1,40 +1,39 @@
 {
-  "name": "typescript-mocha-nyc-code-coverage",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
-    "test:coverage": "nyc npm run test"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "^20.11.5",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
-  },
-  "nyc": {
-    "extends": "@istanbuljs/nyc-config-typescript",
-    "check-coverage": true,
-    "all": true,
-    "include": [
-        "src/**/!(*.test.*).[tj]s?(x)"
-    ],
-    "exclude": [
-        "src/_tests_/**/*.*"
-    ],
-    "reporter": [
-        "html",
-        "lcov",
-        "text",
-        "text-summary"
-    ],
-    "report-dir": "coverage"
-}
-
+    "name": "typescript-mocha-nyc-code-coverage",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "author": "",
+    "license": "ISC",
+    "scripts": {
+      "test": "mocha -r ts-node/register tests/**/*.spec.ts",
+        "test:coverage": "nyc npm run test"
+    },
+    "devDependencies": {
+        "@istanbuljs/nyc-config-typescript": "^1.0.2",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^20.11.5",
+        "mocha": "^10.2.0",
+        "nyc": "^15.1.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3"
+    },
+    "nyc": {
+        "extends": "@istanbuljs/nyc-config-typescript",
+        "check-coverage": true,
+        "all": true,
+        "include": [
+            "src/**/!(*.test.*).[tj]s?(x)"
+        ],
+        "exclude": [
+          "src/_tests_/**/*.*"
+        ],
+        "reporter": [
+            "html",
+            "lcov",
+            "text",
+            "text-summary"
+        ],
+        "report-dir": "coverage"
+    }
 }
