@@ -1,7 +1,7 @@
 import { divide, multiply, subtract, sum } from "../src/calculator";
 var assert = require('assert');
 
-describe('Index tests', function() {
+describe('Calculator tests', function() {
     it('2 + 2 should return 4', function() {
         assert.equal(sum(2, 2), 4);
     });
